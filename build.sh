@@ -3,7 +3,11 @@
 set -o errexit
 
 # Modify this line as needed for your package manager (pip, poetry, etc.)
-apk --no-cache add libressl-dev musl-dev libffi-dev
+if [ -f /etc/os-release ]; then
+  # Instalar las bibliotecas necesarias para libsystemd y libsystemd-journal
+  sudo apt-get update
+  sudo apt-get install -y libssl-dev libffi-dev
+fi
 
 pip install -r requirements.txt
 
