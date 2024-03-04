@@ -4,9 +4,16 @@ set -o errexit
 
 # Modify this line as needed for your package manager (pip, poetry, etc.)
 if [ -f /etc/os-release ]; then
-  # Instalar las bibliotecas necesarias para libsystemd y libsystemd-journal
-   apt-get update
-   apt-get install -y libssl-dev libffi-dev
+  # Crear un directorio temporal para las listas de paquetes
+  mkdir -p /tmp/lists/partial
+  mkdir -p /var/lib/apt/lists/partial
+
+  # Actualizar y luego instalar las bibliotecas necesarias para libsystemd y libsystemd-journal
+  apt-get update
+  apt-get install -y libssl-dev libffi-dev
+
+  # Eliminar el directorio temporal
+  rm -rf /tmp/lists
 fi
 
 pip install -r requirements.txt
