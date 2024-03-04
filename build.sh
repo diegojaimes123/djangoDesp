@@ -3,7 +3,7 @@
 set -o errexit
 
 # Modify this line as needed for your package manager (pip, poetry, etc.)
-
+apk --no-cache add libressl-dev musl-dev libffi-dev
 
 pip install -r requirements.txt
 
