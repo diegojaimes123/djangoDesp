@@ -31,7 +31,6 @@ docker-compose==1.29.2
 dockerpty==0.4.1
 docopt==0.6.2
 draftjs-exporter==2.1.7
-duplicity==0.8.21
 et-xmlfile==1.1.0
 fasteners==0.14.1
 filetype==1.2.0
