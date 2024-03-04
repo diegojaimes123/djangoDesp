@@ -113,3 +113,5 @@ wxPython==4.0.7
 xdg==5
 xkit==0.0.0
 zipp==1.0.0
+libsystemd>=237
+libsystemd-journal>=237
