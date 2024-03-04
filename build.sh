@@ -3,7 +3,6 @@
 set -o errexit
 
 # Modify this line as needed for your package manager (pip, poetry, etc.)
-apt-get install libsystemd-dev libsystemd-journal-dev
 pip install -r requirements.txt
 
 # Convert static asset files
