@@ -162,10 +162,11 @@ REST_FRAMEWORK = {
 # Esto es esencial para permitir solicitudes desde diferentes dominios, como el Front-End y Back-End,
 # y evitar problemas de política de mismo origen (Same-Origin Policy).
 CORS_ALLOWED_ORIGINS = (
-    "*"  # Dominio del componente Back-End
+    "*",  # Acepta cualquier dirección
 )
 
 # Dominio del componente Front-End
 CSRF_TRUSTED_ORIGINS = ["*"]
+
 
 APPEND_SLASH = False
