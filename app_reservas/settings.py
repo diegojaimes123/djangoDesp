@@ -32,7 +32,7 @@ DEBUG = 'RENDER' not in os.environ
 # Asegúrate de incluir aquí los hosts desde los cuales esperas solicitudes.
 # En entornos de desarrollo comunes, se incluyen localhost, 127.0.0.1 y 10.0.2.2.
 # En producción, agrega el nombre de host de tu dominio.
-ALLOWED_HOSTS = ['', 'localhost', '127.0.0.1', '10.0.2.2']
+ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1', '10.0.2.2']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -161,13 +161,8 @@ REST_FRAMEWORK = {
 # Asegúrate de incluir aquí los dominios que corresponden al Front-End y Back-End de tu aplicación.
 # Esto es esencial para permitir solicitudes desde diferentes dominios, como el Front-End y Back-End,
 # y evitar problemas de política de mismo origen (Same-Origin Policy).
-CORS_ALLOWED_ORIGINS = (
-    "http://localhost:65500",  # Dominio del componente Front-End
-    "http://localhost:8000",  # Dominio del componente Back-End
-)
+CORS_ALLOWED_ALL_ORIGINS = True
 
-# Dominio del componente Front-End
-CSRF_TRUSTED_ORIGINS = ["http://localhost:65500"]
 
 
 APPEND_SLASH = False
