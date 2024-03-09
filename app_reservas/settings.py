@@ -161,12 +161,13 @@ REST_FRAMEWORK = {
 # Asegúrate de incluir aquí los dominios que corresponden al Front-End y Back-End de tu aplicación.
 # Esto es esencial para permitir solicitudes desde diferentes dominios, como el Front-End y Back-End,
 # y evitar problemas de política de mismo origen (Same-Origin Policy).
-CORS_ALLOWED_ORIGINS = ( 'http://localhost:65500'
-      # Acepta cualquier dirección
+CORS_ALLOWED_ORIGINS = (
+    "http://localhost:65500",  # Dominio del componente Front-End
+    "http://localhost:8000",  # Dominio del componente Back-End
 )
 
 # Dominio del componente Front-End
-CSRF_TRUSTED_ORIGINS = []
+CSRF_TRUSTED_ORIGINS = ["http://localhost:65500"]
 
 
 APPEND_SLASH = False
