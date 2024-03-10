@@ -161,8 +161,6 @@ REST_FRAMEWORK = {
 # Asegúrate de incluir aquí los dominios que corresponden al Front-End y Back-End de tu aplicación.
 # Esto es esencial para permitir solicitudes desde diferentes dominios, como el Front-End y Back-End,
 # y evitar problemas de política de mismo origen (Same-Origin Policy).
-CORS_ALLOWED_ALL_ORIGINS = True
-
-
+CORS_ORIGIN_ALLOW_ALL = True
 
 APPEND_SLASH = False
