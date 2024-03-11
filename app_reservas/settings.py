@@ -162,5 +162,13 @@ REST_FRAMEWORK = {
 # Esto es esencial para permitir solicitudes desde diferentes dominios, como el Front-End y Back-End,
 # y evitar problemas de política de mismo origen (Same-Origin Policy).
 CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_METHODS = [
+    'POST',
+    'GET',
+    'PUT',
+    'DELETE',
+    'PATCH',
+    'OPTIONS',
+]
 
 APPEND_SLASH = False
